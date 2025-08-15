@@ -1,0 +1,44 @@
+<div class="formulario">
+    <h1>Formulario de Registro</h1>
+
+    <form [formGroup]="perfil" (ngSubmit)="enviar()">
+        <div>
+            <label>Nombre:</label>
+            <input type="text" formControlName="nombre" />
+            <div class="error" *ngIf="f['nombre'].touched && f['nombre'].invalid">
+                <small *ngIf="f['nombre'].errors?.['required']">El nombre es obligatorio</small>
+                <small *ngIf="f['nombre'].errors?.['minlength']">Mínimo 2 caracteres</small>
+            </div>
+        </div>
+
+        <div>
+            <label>Apellido:</label>
+            <input type="text" formControlName="apellido" />
+            <div class="error" *ngIf="f['apellido'].touched && f['apellido'].invalid">
+                <small *ngIf="f['apellido'].errors?.['required']">El apellido es obligatorio</small>
+                <small *ngIf="f['apellido'].errors?.['minlength']">Mínimo 2 caracteres</small>
+            </div>
+        </div>
+
+        <div>
+            <label>Email:</label>
+            <input type="email" formControlName="email" />
+            <div class="error" *ngIf="f['email'].touched && f['email'].invalid">
+                <small *ngIf="f['email'].errors?.['required']">El email es obligatorio</small>
+                <small *ngIf="f['email'].errors?.['minlength']">Formato inválido</small>
+            </div>
+        </div>
+
+        <div>
+            <label>Contraseña:</label>
+            <input type="password" formControlName="password">
+            <div class="error" *ngIf="f['password'].touched && f['password'].invalid">
+                <small *ngIf="f['password'].errors?.['required']">La contraseña es obligatoria</small>
+                <small *ngIf="f['password'].errors?.['minlength']">Mínimo 6 caracteres</small>
+            </div>
+        </div>
+
+        <button type="submit">Registrar</button>
+
+    </form>
+</div>

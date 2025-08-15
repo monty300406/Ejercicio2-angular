@@ -21,7 +21,7 @@ export class Registro {
   }
 
   enviar() {
-    console.log('Estado del form:', this.perfil.status); // "VALID" o "INVALID"
+    console.log('Estado del form:', this.perfil.status); 
     console.log('Errores:', this.perfil.errors);
     console.log('Controles:', this.perfil.controls);
 

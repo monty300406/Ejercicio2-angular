@@ -2,7 +2,7 @@ html,
 body {
   margin: 0;
   height: 100%;
-  background: #fdfdfd; /* Fondo blanco limpio */
+  background: #fdfdfd; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,8 +14,8 @@ body {
   padding: 3rem 2.5rem;
   border-radius: 10px;
   font-family: Georgia, "Times New Roman", Times, serif;
-  border: 1px solid #ccc; /* borde sutil */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* sombra ligera */
+  border: 1px solid #ccc; 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
   width: 100%;
   max-width: 420px;
   text-align: center;
